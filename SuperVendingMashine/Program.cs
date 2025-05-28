@@ -15,11 +15,12 @@ class Program
     static void Main()
     {
         XmlConfigurator.Configure();
-        //var logRepository = LogManager.GetRepository(Assembly.GetEntryAssembly());
-        //XmlConfigurator.Configure(logRepository, new FileInfo("log4net.config"));
-        log.Info("Program started");
+        log.Info("Program start");
+
         VendingMachine machine = new VendingMachine(log);
-        log.Info("Program started");
+      
         machine.Run();
+
+        log.Info("Program end");
     }
 }
